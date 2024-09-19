@@ -117,7 +117,10 @@ const Button = ({
             width={42}
             alt="loading animation"
             className="rounded-xl"
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
         {icon && (
           <FontAwesomeIcon

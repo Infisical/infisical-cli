@@ -101,7 +101,15 @@ export const Navbar = () => {
       <div className="flex w-full justify-between px-4">
         <div className="flex flex-row items-center">
           <div className="flex justify-center py-4">
-            <Image src="/images/logotransparent.png" height={23} width={57} alt="logo" />
+            <Image
+              src="/images/logotransparent.png"
+              height={23}
+              width={57}
+              alt="logo"
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </div>
           <a href="#" className="mx-2 text-2xl font-semibold text-white">
             Infisical

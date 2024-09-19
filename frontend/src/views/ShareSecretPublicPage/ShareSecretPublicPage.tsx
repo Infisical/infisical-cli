@@ -19,7 +19,10 @@ export const ShareSecretPublicPage = () => {
                 width={120}
                 alt="Infisical logo"
                 className="cursor-pointer"
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             </Link>
           </div>
           <h1 className="bg-gradient-to-b from-white to-bunker-200 bg-clip-text text-center text-4xl font-medium text-transparent">

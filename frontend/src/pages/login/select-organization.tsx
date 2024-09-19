@@ -173,7 +173,15 @@ export default function LoginPage() {
       <div className="mx-auto mt-20 w-fit rounded-lg border-2 border-mineshaft-500 p-10 shadow-lg">
         <Link href="/">
           <div className="mb-4 flex justify-center">
-            <Image src="/images/gradientLogo.svg" height={90} width={120} alt="Infisical logo" />
+            <Image
+              src="/images/gradientLogo.svg"
+              height={90}
+              width={120}
+              alt="Infisical logo"
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </div>
         </Link>
         <form

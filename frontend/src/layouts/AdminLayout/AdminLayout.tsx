@@ -195,6 +195,10 @@ export const AdminLayout = ({ children }: LayoutProps) => {
                       width={539}
                       alt="kubernetes image"
                       className="rounded-sm"
+                      style={{
+                        maxWidth: "100%",
+                        height: "auto"
+                      }}
                     />
                   </div>
                   <div className="mt-3 flex w-full items-center justify-between px-0.5">

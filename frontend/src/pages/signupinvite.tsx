@@ -209,7 +209,15 @@ export default function SignupInvite() {
       <p className="mb-6 flex justify-center text-center text-4xl font-semibold text-primary-100">
         Confirm your email
       </p>
-      <Image src="/images/dragon-signupinvite.svg" height={262} width={410} alt="verify email" />
+      <Image
+        src="/images/dragon-signupinvite.svg"
+        height={262}
+        width={410}
+        alt="verify email"
+        style={{
+          maxWidth: "100%",
+          height: "auto"
+        }} />
       <div className="mx-auto mt-10 mb-2 flex max-h-24 max-w-md flex-col items-center justify-center px-4 text-lg md:p-2">
         <Button
           text="Confirm Email"
@@ -369,7 +377,15 @@ export default function SignupInvite() {
       </Head>
       <Link href="/">
         <div className="mb-4 mt-20 flex justify-center">
-          <Image src="/images/gradientLogo.svg" height={90} width={120} alt="Infisical Logo" />
+          <Image
+            src="/images/gradientLogo.svg"
+            height={90}
+            width={120}
+            alt="Infisical Logo"
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
       </Link>
       {step === 1 ? stepConfirmEmail : step === 2 ? main : step4}

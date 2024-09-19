@@ -28,7 +28,10 @@ export default function Custom404() {
           height={554}
           width={942}
           alt="infisical dragon - page not found"
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </div>
     </div>
   );

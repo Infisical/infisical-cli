@@ -55,7 +55,15 @@ export default function VerifyEmail() {
       </Head>
       <Link href="/">
         <div className="mb-8 mt-20 flex cursor-pointer justify-center">
-          <Image src="/images/biglogo.png" height={90} width={120} alt="long logo" />
+          <Image
+            src="/images/biglogo.png"
+            height={90}
+            width={120}
+            alt="long logo"
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
       </Link>
       {step === 1 && (

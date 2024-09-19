@@ -22,7 +22,15 @@ export default function LoginSSOPage() {
       </Head>
       <Link href="/">
         <div className="mb-4 mt-20 flex justify-center">
-          <Image src="/images/gradientLogo.svg" height={90} width={120} alt="Infisical logo" />
+          <Image
+            src="/images/gradientLogo.svg"
+            height={90}
+            width={120}
+            alt="Infisical logo"
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
       </Link>
       <LoginSSO providerAuthToken={token} />

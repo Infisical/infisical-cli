@@ -25,7 +25,10 @@ export default function RequestNewInvite() {
             height={500}
             width={800}
             alt="invitation expired illustration"
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
       </div>
     </div>
