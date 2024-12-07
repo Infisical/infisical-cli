@@ -213,7 +213,11 @@ export const secretSharingServiceFactory = ({
     // or can be safely sent to the client.
     if (expiresAt !== null && expiresAt < new Date()) {
       // check lifetime expiry
-      await secretSharingDAL.softDeleteById(sharedSecretId);
+      if (isUuidV4(sharedSecretId)) {
+        await secretSharingDAL.softDeleteById(sharedSecretId);
+      } else {
+        await secretSharingDAL.softDeleteByIdentifier(Buffer.from(sharedSecretId, "base64url").toString("hex"));
+      }
       throw new ForbiddenRequestError({
         message: "Access denied: Secret has expired by lifetime"
       });
@@ -221,7 +225,11 @@ export const secretSharingServiceFactory = ({
 
     if (expiresAfterViews !== null && expiresAfterViews === 0) {
       // check view count expiry
-      await secretSharingDAL.softDeleteById(sharedSecretId);
+      if (isUuidV4(sharedSecretId)) {
+        await secretSharingDAL.softDeleteById(sharedSecretId);
+      } else {
+        await secretSharingDAL.softDeleteByIdentifier(Buffer.from(sharedSecretId, "base64url").toString("hex"));
+      }
       throw new ForbiddenRequestError({
         message: "Access denied: Secret has expired by view count"
       });
